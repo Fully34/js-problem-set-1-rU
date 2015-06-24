@@ -72,3 +72,36 @@ function wordCounter(string) {
 }
 
 
+
+//===========================================================================//
+                        /* ~~~ PRIME TIME ~~~ */ 
+//===========================================================================//
+
+function primeTime(num) {
+
+    var prime = true;
+
+    if ( (num <= 2) && (num > 0) ) {
+
+        prime = false;
+        return prime;
+
+    } else if (num < 0) {
+
+        prime = false;
+        return "You so silly, negative numbers will NEVER be prime, mwahahaha!  Prime = " + prime;
+
+    } else {
+
+        for (var i = 2; i < num / 2 ; i ++) {
+
+            if (num % i === 0) {
+
+                prime = false;
+                return prime; 
+            }
+        }
+    }
+    
+    return prime;
+}
