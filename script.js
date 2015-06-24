@@ -83,7 +83,6 @@ function primeTime(num) {
 
     if ( (num <= 2) && (num > 0) ) {
 
-        prime = false;
         return prime;
 
     } else if (num < 0) {
@@ -93,7 +92,7 @@ function primeTime(num) {
 
     } else {
 
-        for (var i = 2; i < num / 2 ; i ++) {
+        for (var i = 3; i <= num / 2 ; i ++) {
 
             if (num % i === 0) {
 
@@ -102,6 +101,6 @@ function primeTime(num) {
             }
         }
     }
-    
+
     return prime;
 }
